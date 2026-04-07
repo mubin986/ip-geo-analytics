@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+
+# Output / generated files
+output-*.*
+output.*
+*.xlsx
+*.csv
+
+# Input data (use ips.example.json as reference)
+ips.json
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.*

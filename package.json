@@ -1,0 +1,17 @@
+{
+  "name": "ip-geo-analytics",
+  "version": "1.0.0",
+  "description": "Offline IP geolocation and analytics tool with Excel reporting",
+  "main": "index.js",
+  "scripts": {
+    "start": "node batch.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "exceljs": "^4.4.0",
+    "geoip-lite": "^1.4.10"
+  }
+}
