@@ -1,11 +1,13 @@
 # Dependencies
 node_modules/
 
-# Output / generated files
+# Output / generated files (except examples)
 output-*.*
 output.*
 *.xlsx
 *.csv
+!*.example.json
+!*.example.xlsx
 
 # Input data (use ips.example.json as reference)
 ips.json

@@ -18,7 +18,7 @@ Prepare your input file (see `ips.example.json`). Both formats are supported:
 ```json
 [
   { "ip": "8.8.8.8" },
-  { "ip": "206.189.131.1" }
+  { "ip": "103.4.146.1" }
 ]
 ```
 
@@ -26,7 +26,7 @@ Prepare your input file (see `ips.example.json`). Both formats are supported:
 ```json
 [
   "8.8.8.8",
-  "206.189.131.1"
+  "103.4.146.1"
 ]
 ```
 
@@ -34,7 +34,7 @@ Prepare your input file (see `ips.example.json`). Both formats are supported:
 ```json
 [
   { "ip": "8.8.8.8" },
-  "206.189.131.1"
+  "103.4.146.1"
 ]
 ```
 
@@ -78,21 +78,104 @@ The batch processor generates 3 output files:
 | All Results | Every IP with full geo details + auto-filter |
 | Failed IPs | Unresolved IPs |
 
+### Sample Output
+
+**`output-details.json`** — per-IP geo results:
+
+```json
+{
+  "generatedAt": "2026-04-07T07:36:36.484Z",
+  "total": 6,
+  "results": [
+    {
+      "ip": "103.4.146.1",
+      "city": "Dhaka",
+      "region": "C",
+      "country": "BD",
+      "timezone": "Asia/Dhaka",
+      "ll": [23.7272, 90.4093]
+    },
+    {
+      "ip": "202.84.37.1",
+      "city": "Dhaka",
+      "region": "C",
+      "country": "BD",
+      "timezone": "Asia/Dhaka",
+      "ll": [23.7272, 90.4093]
+    },
+    {
+      "ip": "8.8.8.8",
+      "city": "Unknown",
+      "region": "Unknown",
+      "country": "US",
+      "timezone": "America/Chicago",
+      "ll": [37.751, -97.822]
+    }
+  ]
+}
+```
+
+**`output-analytics.json`** — analytics summary:
+
+```json
+{
+  "generatedAt": "2026-04-07T07:36:36.485Z",
+  "totalIPs": 6,
+  "resolved": 6,
+  "failedCount": 0,
+  "failedIPs": [],
+  "uniqueCountries": 3,
+  "uniqueCities": 1,
+  "uniqueTimezones": 3,
+  "topCountries": [
+    { "name": "US", "count": 3 },
+    { "name": "BD", "count": 2 },
+    { "name": "Unknown", "count": 1 }
+  ],
+  "topCities": [
+    { "name": "Dhaka", "count": 2 }
+  ],
+  "topTimezones": [
+    { "name": "America/Chicago", "count": 3 },
+    { "name": "Asia/Dhaka", "count": 2 },
+    { "name": "Unknown", "count": 1 }
+  ]
+}
+```
+
+**`output-analytics.xlsx`** — Excel report with styled tabs:
+
+| Summary | | Countries | |
+|---|---|---|---|
+| Total IPs | 6 | US | 3 |
+| Resolved | 6 | BD | 2 |
+| Failed | 0 | Unknown | 1 |
+| Unique Countries | 3 | | |
+| Unique Cities | 1 | | |
+| Resolution Rate | 100.0% | | |
+
+| All Results | | | | |
+|---|---|---|---|---|
+| IP Address | City | Region | Country | Timezone |
+| 103.4.146.1 | Dhaka | C | BD | Asia/Dhaka |
+| 202.84.37.1 | Dhaka | C | BD | Asia/Dhaka |
+| 8.8.8.8 | Unknown | Unknown | US | America/Chicago |
+
 ### Single IP Lookup
 
 ```bash
-node index.js 206.189.131.1
+node index.js 103.4.146.1
 ```
 
 Output:
 
 ```
-IP:       206.189.131.1
-City:     Bengaluru
-Region:   KA
-Country:  IN
-Timezone: Asia/Kolkata
-Lat/Lng:  12.9634, 77.5855
+IP:       103.4.146.1
+City:     Dhaka
+Region:   C
+Country:  BD
+Timezone: Asia/Dhaka
+Lat/Lng:  23.7272, 90.4093
 ```
 
 ### As a Module
@@ -100,7 +183,7 @@ Lat/Lng:  12.9634, 77.5855
 ```js
 const { lookupCity } = require("./index");
 
-const result = lookupCity("157.240.1.35");
+const result = lookupCity("103.4.146.1");
 // { ip, city, region, country, timezone, ll }
 ```
 

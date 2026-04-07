@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-04-07T07:36:36.485Z",
+  "totalIPs": 6,
+  "resolved": 6,
+  "failedCount": 0,
+  "failedIPs": [],
+  "uniqueCountries": 3,
+  "uniqueCities": 1,
+  "uniqueTimezones": 3,
+  "topCountries": [
+    {
+      "name": "US",
+      "count": 3
+    },
+    {
+      "name": "BD",
+      "count": 2
+    },
+    {
+      "name": "Unknown",
+      "count": 1
+    }
+  ],
+  "topCities": [
+    {
+      "name": "Dhaka",
+      "count": 2
+    }
+  ],
+  "topTimezones": [
+    {
+      "name": "America/Chicago",
+      "count": 3
+    },
+    {
+      "name": "Asia/Dhaka",
+      "count": 2
+    },
+    {
+      "name": "Unknown",
+      "count": 1
+    }
+  ]
+}

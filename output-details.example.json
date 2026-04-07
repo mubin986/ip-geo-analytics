@@ -1,0 +1,72 @@
+{
+  "generatedAt": "2026-04-07T07:36:36.484Z",
+  "total": 6,
+  "results": [
+    {
+      "ip": "103.4.146.1",
+      "city": "Dhaka",
+      "region": "C",
+      "country": "BD",
+      "timezone": "Asia/Dhaka",
+      "ll": [
+        23.7272,
+        90.4093
+      ]
+    },
+    {
+      "ip": "202.84.37.1",
+      "city": "Dhaka",
+      "region": "C",
+      "country": "BD",
+      "timezone": "Asia/Dhaka",
+      "ll": [
+        23.7272,
+        90.4093
+      ]
+    },
+    {
+      "ip": "8.8.8.8",
+      "city": "Unknown",
+      "region": "Unknown",
+      "country": "US",
+      "timezone": "America/Chicago",
+      "ll": [
+        37.751,
+        -97.822
+      ]
+    },
+    {
+      "ip": "13.107.42.14",
+      "city": "Unknown",
+      "region": "Unknown",
+      "country": "US",
+      "timezone": "America/Chicago",
+      "ll": [
+        37.751,
+        -97.822
+      ]
+    },
+    {
+      "ip": "1.1.1.1",
+      "city": "Unknown",
+      "region": "Unknown",
+      "country": "Unknown",
+      "timezone": "Unknown",
+      "ll": [
+        null,
+        null
+      ]
+    },
+    {
+      "ip": "172.217.14.206",
+      "city": "Unknown",
+      "region": "Unknown",
+      "country": "US",
+      "timezone": "America/Chicago",
+      "ll": [
+        37.751,
+        -97.822
+      ]
+    }
+  ]
+}
